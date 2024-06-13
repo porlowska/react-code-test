@@ -1,8 +1,23 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import useLocalStorage from 'use-local-storage';
+
 
 const App = () => {
+
+  //save in local storage and use local storage to set mode
+  const[isDark, setIsDark]=useLocalStorage("isDark", false)
+
+    // Utilise the existing dark-mode scss file by adding a dark-mode class to the root html element
+    useEffect(() => {
+      if (isDark) {
+        document.documentElement.classList.add('dark-mode');
+      } else {
+        document.documentElement.classList.remove('dark-mode');
+      }
+    }, [isDark]);
+
   return (
     <div className='app'>
       <div className='app__header'>
@@ -10,7 +25,8 @@ const App = () => {
         
         {/* --The button that should toggle dark mode-- */}
         <button className='app__header--button'>
-          <FontAwesomeIcon icon={faMoon} />
+          {/* Add dark-mode switching functionality to the existing dark-mode button */}
+          <FontAwesomeIcon icon={isDark? faSun : faMoon} onClick={()=>(setIsDark(!isDark))} />
         </button>
       </div>
 
