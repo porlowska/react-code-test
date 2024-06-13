@@ -1,6 +1,11 @@
 # Dark Mode Coding Challenge 🌙 &nbsp; ![medium](https://img.shields.io/badge/-Medium-yellow) ![time](https://img.shields.io/badge/%E2%8F%B0-30m-blue) 
 
 &nbsp;
+# Overview
+This is designed to test a programmer's skills in state management, DOM manipulation and local storage. The candidate should complete this within 30 minutes and not use any resources to help them complete this test. The candidate should develop on the react code to meet the Requirements and answer the question within the question section on the readme document. 
+
+
+&nbsp;
 # Goals / Outcomes ✨
 - Using state and global state
 - DOM manipulation
