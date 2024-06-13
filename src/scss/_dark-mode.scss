@@ -1,0 +1,63 @@
+.dark-mode {
+  
+  background: #121212;
+
+  .app {
+    &__header {
+      &--title {
+        color: #bb86fc;
+      }
+
+      &--button {
+        color: #FFA500;
+      }
+    }
+
+    &__content {
+      p {
+        color: white;
+      }
+
+      .input {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+
+        &::placeholder {
+          color: white;
+        }
+
+        &:hover {
+          border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        &:focus {
+          border-color: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      &--buttons {
+        .button {
+          background-color: #0c786e;
+          &:hover,
+          :focus {
+            background-color: #03dac6;
+            opacity: 75%;
+            color: black;
+          }
+        }
+
+        .is-primary {
+          background-color: #bb86fc;
+          color: black;
+
+          &:hover,
+          :focus {
+            background-color: #bb86fc;
+            opacity: 75%;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
